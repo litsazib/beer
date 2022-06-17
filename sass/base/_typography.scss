@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// Basic typography style for copy text
+// -----------------------------------------------------------------------------
+body {
+    color: $text-color;
+    font-weight: normal;
+    font-size: 1.3rem;
+    line-height: 1.231;
+    font-family: $text-font-stack;
+}
+p {
+    font-family: $amiri;
+}
+h1,h3{
+    font-family: $Cinzel;
+}

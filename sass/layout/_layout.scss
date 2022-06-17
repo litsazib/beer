@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// Layout Settings
+// -----------------------------------------------------------------------------
+%center-content {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $grid-gutter-width;
+}
+
+.inner {
+  @extend %center-content;
+
+  @include media-down(sp) {
+    padding: 0 $grid-gutter-width-sp;
+  }
+}
+
+#contents {
+  max-width: 100%;
+  width: 100%;
+}
+
+#main {
+  width: 100%;
+}
+
+#side {
+  width: 25%;
+  min-width: 220px;
+  margin-left: $grid-gutter-width;
+  background-color: green; // Remove on real project
+  background-image: image("common/blank.png"); // Remove on real project
+
+  @at-root .reverse & {
+    margin-left: 0;
+    margin-right: $grid-gutter-width;
+  }
+
+  @include media-down(sp) {
+    width: 100%;
+    margin-left: 0;
+  }
+}

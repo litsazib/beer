@@ -1,0 +1,172 @@
+// -----------------------------------------------------------------------------
+// Header style
+// -----------------------------------------------------------------------------
+#header {
+  .headerWrap {
+    display: flex;
+    align-items: center;
+    padding: 13px 0 9px;
+    .logo {
+      margin-left: 1%;
+      margin-right: 1%;
+      margin-top: 10px;
+      max-width: 15%;
+      width: 100%;
+      h1 {
+        a {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .mainMenu {
+      max-width: 70%;
+      width: 100%;
+      ul {
+      display: flex;
+      align-items: center;
+      gap: 2%;
+      justify-content: center;
+      flex-wrap: wrap;
+        li {
+          a {
+            font-size: 16px;
+            font-family: $YuGothic;
+            font-weight: bold;
+            letter-spacing: 0.8px;
+            color: $color-black;
+            text-decoration: none;
+            display: block;
+            padding-bottom: 5px;
+            &:hover {
+              opacity: 0.7;
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+    }
+    .rightMenu {
+      max-width: 15%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .spMenu {
+    display: block;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    height: 60px;
+    z-index: 999;
+    .dFlex {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 10px;
+      align-items: center;
+      .logo {
+        h1 {
+          a {
+            img {
+              max-width: 215px;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .rightNav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .rightMenu {
+          img {
+            max-width: 200px;
+            width: 100%;
+            position: relative;
+            left: 10px;
+          }
+        }
+        .navClick {
+          width: 35px;
+          text-align: center;
+          cursor: pointer;
+          #navMenu {
+            position: relative;
+            display: block;
+            padding: 0;
+            width: 60%;
+            text-align: center;
+            margin: 0 auto;
+            height: 44px;
+            padding-left: 10px;
+            span {
+              display: block;
+              width: 100%;
+              height: 2px;
+              background: #2B5599;
+              position: absolute;
+              -webkit-transition: 0.2s ease-in-out;
+              transition: 0.2s ease-in-out;
+              &:nth-child(1) {
+                top: 16px;
+              }
+              &:nth-child(2) {
+                top: 22px;
+              }
+              &:nth-child(3) {
+                top: 28px;
+              }
+            }
+          }
+        }
+      }
+      .close #navMenu span:nth-child(1) {
+        top: 20px !important;
+        -webkit-transform: rotate(135deg) !important;
+        transform: rotate(135deg) !important;
+      }
+      .close #navMenu span:nth-child(2) {
+        width: 0 !important;
+        opacity: 0;
+      }
+      .close #navMenu span:nth-child(3) {
+        top: 20px !important;
+        -webkit-transform: rotate(-135deg) !important;
+        transform: rotate(-135deg) !important;
+      }
+    }
+  }
+  .spMenuPage {
+    background: #fff;
+    height: 100vh;
+    z-index: 9999;
+    position: fixed;
+    width: 0%;
+    overflow: hidden;
+    transition: 0.3s;
+    top: 60px;
+    transition: 0.3s;
+    ul {
+      padding: 35px 20px;
+      li {
+        a {
+          font-size: 11px;
+          padding: 5px 17px;
+          letter-spacing: 0.65px;
+          color: #333333;
+          text-decoration: none;
+          display: block;
+        }
+      }
+    }
+  }
+  .show {
+    width: 100% !important;
+    transition: 0.3s;
+  }
+}
